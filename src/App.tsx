@@ -355,7 +355,6 @@ function Hero({ onNavigate }: { onNavigate: (route: Route, params?: URLSearchPar
       <div className="hero-overlay" />
       <div className="site-shell hero-content">
         <div className="hero-copy">
-          <p className="eyebrow">Plateforme premium evenementielle</p>
           <h1>
             Organisez
             <span>Chaque Moment</span>
@@ -526,14 +525,30 @@ function HomePage({ onNavigate }: { onNavigate: (route: Route, params?: URLSearc
     <>
       <Hero onNavigate={onNavigate} />
       <ServiceRail onNavigate={onNavigate} />
-      <section className="page-section">
+      <section className="page-section promise-section">
         <div className="site-shell">
           <SectionTitle
-            eyebrow="Services"
-            title="Tous les services pour organiser votre evenement"
-            text="Chaque categorie possede sa propre page avec ses informations, sa photo et un bouton de reservation."
+            eyebrow="Experience Eventy"
+            title="Un devis clair, des prestataires serieux, une organisation plus simple"
+            text="Eventy rassemble les bonnes informations au bon endroit: votre type d'evenement, la ville, la date, les invites et les prestataires souhaites."
           />
-          <ServiceGrid onNavigate={onNavigate} />
+          <div className="promise-grid">
+            <article>
+              <Sparkles size={28} />
+              <h3>Brief organise</h3>
+              <p>La recherche remplit automatiquement le devis pour eviter de tout ressaisir.</p>
+            </article>
+            <article>
+              <BadgeCheck size={28} />
+              <h3>Pages detaillees</h3>
+              <p>Chaque service et chaque prestataire possede sa page avec image, infos et reservation.</p>
+            </article>
+            <article>
+              <MessageCircle size={28} />
+              <h3>Contact WhatsApp</h3>
+              <p>Le formulaire genere un message clair et pret a envoyer a Eventy.</p>
+            </article>
+          </div>
         </div>
       </section>
       <section className="page-section providers-preview">
