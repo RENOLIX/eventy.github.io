@@ -31,7 +31,8 @@ import {
 import type { FormEvent, ReactNode } from "react";
 import { useEffect, useMemo, useState } from "react";
 
-const WHATSAPP_NUMBER = "213000000000";
+const DISPLAY_PHONE = "0551114603";
+const WHATSAPP_NUMBER = "213551114603";
 
 type NavPage = "home" | "services" | "providers" | "destinations" | "about" | "devis";
 type Route =
@@ -820,7 +821,7 @@ function DevisPage() {
             message. Vous pourrez modifier le texte dans WhatsApp avant l'envoi.
           </p>
           <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noreferrer">
-            <Phone size={16} /> WhatsApp Eventy
+            <Phone size={16} /> WhatsApp Eventy: {DISPLAY_PHONE}
           </a>
           <a href="mailto:contact@eventy.com">
             <Mail size={16} /> contact@eventy.com
@@ -955,6 +956,9 @@ function Footer({ onNavigate }: { onNavigate: (route: Route) => void }) {
         <div className="footer-brand">
           <Logo onNavigate={onNavigate} />
           <p>Votre plateforme pour organiser evenements, services, prestataires et experiences memorables.</p>
+          <a className="footer-phone" href={`tel:${DISPLAY_PHONE}`}>
+            <Phone size={15} /> {DISPLAY_PHONE}
+          </a>
           <div className="social-row">
             {[Facebook, Instagram, Music2, Youtube].map((Icon, itemIndex) => (
               <button key={itemIndex} aria-label="Lien reseau social">

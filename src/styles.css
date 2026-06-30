@@ -956,6 +956,15 @@ main {
   line-height: 1.7;
 }
 
+.footer-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  font-weight: 800;
+  text-decoration: none;
+}
+
 .social-row {
   display: flex;
   gap: 12px;
